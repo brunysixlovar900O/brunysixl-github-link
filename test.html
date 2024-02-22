@@ -1,0 +1,150 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@800&display=swap');
+  font-family: 'Lexend', sans-serif;
+</style>
+
+<html>
+<head>
+  <link href='nggstyle.css' rel='stylesheet'>
+</head>
+<body>
+
+<style>
+body {
+  background-image: url('brunysixl texture.gif');
+}
+</style>
+  
+
+  
+  <div>
+   
+<div class="controls">
+      <img src="ezgif-5-c2d6c618ca.gif" width="40px" height="40px" onclick="window.location.href='/';">
+        <link rel="shortcut icon" href="ezgif-5-41dee13eff.gif" sizes="192x192" type="image/png">
+      <h2>Cookie Clicker</h2>
+      <button class="cyan" onclick="goFullscreen('file'); return false">Fullscreen</button>
+      <script>document.body.addEventListener("keydown", function (event) {
+        if (event.key === "F12") {
+            window.location.replace("https://google.com");
+        }
+    });</script>
+<script>
+function goFullscreen(id) {
+    var element = document.getElementById(id);
+    if (element.mozRequestFullScreen) {
+      element.mozRequestFullScreen();
+    } else if (element.webkitRequestFullScreen) {
+      element.webkitRequestFullScreen();
+    }
+}
+</script>
+
+
+	<button class="cyan" onclick="toggleScript()">Open Discord Chatroom</button>
+	<script>
+		function createScript() {
+			var script = document.createElement("script");
+			script.id = "discord";
+			script.src = "https://cdn.jsdelivr.net/npm/@widgetbot/crate@3";
+			script.innerHTML = "new Crate({ server: '1154528719264821248', channel: '1207033719353778247' });";
+			document.body.appendChild(script);
+		}
+
+		function deleteScript() {
+			var script = document.getElementById("discord");
+			if (script) {
+				document.body.removeChild(script);
+			}
+		}
+
+		function toggleScript() {
+			var script = document.getElementById("discord");
+			if (script) {
+				deleteScript();
+			} else {
+				createScript();
+			}
+		}
+	</script>
+
+		<button class="cyan" onclick="toggleWidgetBot(); deleteDiscord()">Close discord Chatroom</button>
+	<script>
+		function toggleWidgetBot() {
+			var widgetbot = document.getElementsByTagName("widgetbot-crate")[0];
+			if (widgetbot) {
+				widgetbot.parentNode.removeChild(widgetbot);
+			} else {
+				widgetbot = document.createElement("widgetbot-crate");
+				widgetbot.src = "https://widgetbot.io";
+				widgetbot.docs = "docs.widgetbot.io";
+				document.body.appendChild(widgetbot);
+			}
+		}
+	</script>
+  	<script>
+      function deleteDiscord() {
+        var script = document.getElementById("discord");
+        if (script) {
+          script.parentNode.removeChild(script);
+        }
+      }
+    </script>
+
+
+
+<iframe id="file" name="innerFrame" sandbox="allow-scripts  allow-forms allow-same-origin allow-downloads" frameborder="0" allowfullscreen="true" width="1000" height="600" marginwidth="0" marginheight="0" hspace="0" vspace="0"
+	src="https://somuchmath.yourmom.eu.org/projects/cookie-clicker/" style="overflow: auto;">
+		</div>
+  </div>
+  <style>
+    p{
+      color: white
+    }
+    h2{
+      color: white
+    }
+    body{
+      text-align: center;
+    }
+    a{
+      text-align: left;
+    }
+  </style>
+
+</body>
+
+</html>
+</iframe></div>
+    
+</body>
+</html>
+
+<!--Scripts-->
+<script>
+async function registerSW() {    
+  const workerURL = "./sw.js";
+  const worker = await navigator.serviceWorker.getRegistration(workerURL, {
+    scope: __uv$config.prefix,
+  });
+  return navigator.serviceWorker.register(workerURL, { scope: __uv$config.prefix });
+}
+function proxy(url) {
+  registerSW().then(worker => {   
+    window.location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
+  });
+}
+function goNowgg() {
+  var url = document.getElementById("url").value;  
+  var regex = /^https:\/\/now\.gg\/play\/([^/]+)\/(\d+)\/([^/]+)$/;
+  if (regex.test(url)) {
+    proxy(url);
+  } else {
+    alert("Please enter a valid Now.gg URL and try again (Use https:// at the start of your URL)!");
+  }
+}
+</script>
+<!--Ultraviolet Scripts-->
+<script src="uv/uv.bundle.js"></script>
+<script src="uv/uv.config.js"></script>
+<title>Math Practice | Activites</title>
